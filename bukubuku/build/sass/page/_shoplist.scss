@@ -1,0 +1,169 @@
+article.shoplist {
+	.search {
+		h3 {
+			font-size : 16px;
+			font-weight : normal;
+
+			padding-bottom : 20px;
+		}
+		.search_detail {
+			display : flex;
+			align-items : center;
+			flex-wrap : wrap;
+			justify-content : space-between;
+
+			padding : 20px 0;
+
+			border-top : 1px solid #dddddd;
+			border-bottom : 1px solid #dddddd;
+			div {
+				display : flex;
+				align-items : center;
+				flex-wrap : wrap;
+				dl {
+					margin-bottom : 5px;
+
+@include media-breakpoint-up(md) {
+						margin-bottom : 0;
+					}
+				}
+			}
+			select {
+				width : 160px;
+				padding : 8px;
+
+				border : 1px solid #dddddd;
+			}
+		}
+	}
+	.list {
+		border-bottom : 1px solid #dddddd;
+		& > li {
+			display : flex;
+			flex-wrap : wrap;
+
+			padding : 25px 0;
+
+			border-bottom : 1px solid #dddddd;
+			.name {
+				font-size : 20px;
+				font-weight : bold;
+
+				width : 100%;
+				margin-bottom : 25px;
+			}
+			.img {
+				margin-bottom : 10px;
+				width:100%;
+
+@include media-breakpoint-up(md) {
+					width : 40%;
+					margin-right : 4%;
+					margin-bottom : 0;
+				}
+			}
+			.info {
+				width:100%;
+				@include media-breakpoint-up(md) {
+					width : 56%;
+				}
+				li {
+					&:not(:first-child) {
+						padding : 17px 0;
+
+@include media-breakpoint-up(md) {
+							padding : 20px 15px;
+						}
+					}
+					&:not(:last-child) {
+						border-bottom : 1px solid #dddddd;
+					}
+					i {
+						font-size : 18px;
+
+						margin-right : 10px;
+
+						vertical-align : middle;
+
+						color : map-get($color, "sky");
+					}
+				}
+				dl {
+					display : flex;
+					align-items : center;
+					dt {
+						margin-right : 10px;
+
+						color : map-get($color, "sky");
+					}
+					&.area {
+						margin-bottom : 10px;
+
+@include media-breakpoint-up(md) {
+							margin-bottom : 20px;
+						}
+					}
+					&.features {
+						display : block;
+						align-items : flex-start;
+
+						margin-bottom : 10px;
+
+@include media-breakpoint-up(md) {
+							display : flex;
+							margin-bottom : 15px;
+						}
+						dt {
+							display : inline-block;
+							color : #ffffff;
+							margin-bottom : 5px;
+							@include media-breakpoint-up(md) {
+								margin-bottom : 0;
+							}
+						}
+						dd {
+							display : flex;
+							flex-wrap : wrap;
+							span {
+								font-size : 12px;
+								font-weight : normal;
+
+								margin-right : 10px;
+								margin-bottom : 10px;
+								padding : 3px 15px;
+
+								color : #60c0bd;
+								border : 1px solid #60c0bd;
+								border-radius : 5px;
+							}
+						}
+					}
+				}
+			}
+			.shop_tags{
+				max-width:950px;
+			}
+			.to_detail {
+				width : 100%;
+				a {
+					display : block;
+
+					width : 100%;
+					max-width : 240px;
+					margin : 0 auto;
+					padding : 10px 0;
+
+					text-align : center;
+
+					color : #ffffff;
+					border-radius : 5px;
+					background : map-get($color, "sky");
+
+@include media-breakpoint-up(md) {
+						margin : 0 0 0 auto;
+					}
+				}
+			}
+		}
+	}
+}

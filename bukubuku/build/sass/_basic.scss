@@ -1,0 +1,424 @@
+/*
+  Basic CSS Document
+  produce by World Agent
+  URL:http://worldagent.jp
+  Theme Name: Original-Thema
+  Author: worldagent
+  Template: Original-Thema
+*/
+
+ol,
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  word-break: break-all;
+  &:focus,
+  &:active,
+  &:visited {
+    outline: none !important;
+  }
+
+  -webkit-transition: 0.25s;
+  -moz-transition: 0.25s;
+  -o-transition: 0.25s;
+  transition: 0.25s;
+
+  &::before,
+  &::after {
+    -webkit-transition: 0.25s;
+    -moz-transition: 0.25s;
+    -o-transition: 0.25s;
+    transition: 0.25s;
+  }
+}
+
+body:hover {
+  -webkit-transition: 0s;
+  -moz-transition: 0s;
+  -o-transition: 0s;
+}
+
+//  hr
+
+.hr {
+  border: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 1px;
+  background-color: #333;
+}
+
+//  position
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+//  font-weight
+
+.bold {
+  font-weight: bold;
+}
+
+.normal {
+  font-weight: normal;
+}
+
+//  line-height
+
+.lh_0 {
+  line-height: 0;
+}
+
+.lh_1 {
+  line-height: 1;
+}
+
+.lh_13 {
+  line-height: 1.3;
+}
+
+.lh_15 {
+  line-height: 1.5;
+}
+
+.lh_18 {
+  line-height: 1.8;
+}
+
+.lh_2 {
+  line-height: 2;
+}
+
+.lh_25 {
+  line-height: 2.5;
+}
+
+//  letter-spacing
+
+.ls_-1 {
+  letter-spacing: -1px;
+}
+
+.ls_-05 {
+  letter-spacing: -0.5px;
+}
+
+.ls_0 {
+  letter-spacing: 0px;
+}
+
+.ls_1 {
+  letter-spacing: 1px;
+}
+
+.ls_2 {
+  letter-spacing: 2px;
+}
+
+//  floating
+
+.fl_r {
+  float: right;
+}
+
+.fl_l {
+  float: left;
+}
+
+//  vertical-align
+
+.va_middle {
+  vertical-align: middle;
+}
+
+.va_top {
+  vertical-align: top;
+}
+
+.va_bottom {
+  vertical-align: bottom;
+}
+
+//  display
+
+.inline {
+  display: inline;
+}
+
+.i_block {
+  display: inline-block;
+}
+
+.block {
+  display: block;
+}
+
+.d_table {
+  display: table;
+}
+
+.t_cell {
+  display: table-cell;
+}
+
+@media screen and (max-width: 767px) {
+  //  text-align
+  .sp_left {
+    text-align: left;
+  }
+
+  .sp_center {
+    text-align: center;
+  }
+}
+
+//  font-size
+
+$fs: 10;
+@while $fs < 50 {
+  .fs#{$fs} {
+    font-size: $fs + px;
+    @media only screen and (max-width: 767px) {
+      font-size: $fs - 2 + px;
+    }
+  }
+  $fs: $fs + 2;
+}
+
+@media only screen and (max-width: 767px) {
+  $spfs: 11;
+  @while $spfs <= 28 {
+    .spfs#{$spfs} {
+      font-size: $spfs + px;
+    }
+    $spfs: $spfs + 1;
+  }
+}
+
+//  font-color + bg-color
+
+$color: (
+  "white": #fff,
+  "black": #000,
+  "red": #dc1819,
+  // 変更
+  "blue": #002d6a,
+  // 変更
+  "green": #306418,
+  "gray": #aaa,
+  "orange": #ff7800,
+  "sky": #60c0bd,
+  "brown": #b6ad85,
+  "purple": #3a0525,
+  "darkpurple": #330320,
+  "yellow": #fbc500,
+  // 変更
+);
+
+//個別取得　map-get($color, white);
+
+@each $key, $value in $color {
+  .#{$key} {
+    color: $value;
+    a {
+      color: $value;
+    }
+  }
+  .bg_#{$key} {
+    background-color: $value;
+  }
+}
+
+//  margin padding
+
+.mgauto {
+  margin: auto;
+}
+
+.mgright {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.mg0 {
+  margin: 0;
+}
+
+$num: 0;
+
+@while $num <= 100 {
+  // .mgt margin top
+  .mgt#{$num} {
+    margin-top: $num + px;
+  }
+
+  // .mgr margin right
+  .mgr#{$num} {
+    margin-right: $num + px;
+  }
+
+  // .mgb margin bottom
+  .mgb#{$num} {
+    margin-bottom: $num + px;
+  }
+
+  // .mgl margin left
+  .mgl#{$num} {
+    margin-left: $num + px;
+  }
+
+  // .pd padding
+  .pd#{$num} {
+    padding: $num + px;
+  }
+
+  // .pdt padding top
+  .pdt#{$num} {
+    padding-top: $num + px;
+  }
+
+  // .pdr padding right
+  .pdr#{$num} {
+    padding-right: $num + px;
+  }
+
+  // .pdb padding bottom
+  .pdb#{$num} {
+    padding-bottom: $num + px;
+  }
+
+  // .pdl padding left
+  .pdl#{$num} {
+    padding-left: $num + px;
+  }
+
+  $num: $num + 5;
+}
+
+// sm-gutters Class Rules
+.sm-gutters {
+  margin-right: -10px;
+  margin-left: -10px;
+
+  > {
+    [class^="col-"],
+    [class*=" col-"] {
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+  }
+}
+
+// no-gutters Class Rules
+.xs-gutters {
+  margin-right: -6px;
+  margin-left: -6px;
+
+  > {
+    [class^="col-"],
+    [class*=" col-"] {
+      padding-right: 6px;
+      padding-left: 6px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  // sp margin
+
+  .spmgauto {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .spmgright {
+    margin-right: 0;
+    margin-left: auto;
+  }
+
+  $spnum: 0;
+
+  @while $spnum <= 100 {
+    // .mgt margin top
+    .spmgt#{$spnum} {
+      margin-top: $spnum + px;
+    }
+
+    // .mgr margin right
+    .spmgr#{$spnum} {
+      margin-right: $spnum + px;
+    }
+
+    // .mgb margin bottom
+    .spmgb#{$spnum} {
+      margin-bottom: $spnum + px;
+    }
+
+    // .mgl margin left
+    .spmgl#{$spnum} {
+      margin-left: $spnum + px;
+    }
+
+    // .pd padding
+    .sppd#{$spnum} {
+      padding: $spnum + px;
+    }
+
+    // .pdt padding top
+    .sppdt#{$spnum} {
+      padding-top: $spnum + px;
+    }
+
+    // .pdr padding right
+    .sppdr#{$spnum} {
+      padding-right: $spnum + px;
+    }
+
+    // .pdb padding bottom
+    .sppdb#{$spnum} {
+      padding-bottom: $spnum + px;
+    }
+
+    // .pdl padding left
+    .sppdl#{$spnum} {
+      padding-left: $spnum + px;
+    }
+
+    $spnum: $spnum + 5;
+  }
+
+  // sp-gutters Class Rules
+
+  .sp-gutters {
+    margin-right: 0;
+    margin-left: 0;
+
+    > {
+      [class^="col-"],
+      [class*=" col-"] {
+        padding-right: 0;
+        padding-left: 0;
+      }
+    }
+  }
+}
+
+.visible-ss {
+  @media (min-width: 576px) {
+    display: none !important;
+  }
+}

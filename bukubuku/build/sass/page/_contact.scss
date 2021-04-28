@@ -1,0 +1,162 @@
+article.compcontactany {
+  .sp {
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+  }
+  .text {
+    margin: 50px 0;
+    text-align: center;
+    font-weight: bold;
+  }
+  form {
+    font-size: 16px;
+    dl {
+      margin-bottom: 20px;
+      @include media-breakpoint-up(md) {
+        display: flex;
+      }
+      dt {
+        padding: 5px 0;
+        font-weight: bold;
+        @include media-breakpoint-up(md) {
+          width: 230px;
+          margin-right: 30px;
+        }
+        .require {
+          padding: 2px 10px;
+          margin-left: 10px;
+          background: #b6ad85;
+          border-radius: 3px;
+          color: #fff;
+          font-size: 14px;
+          @include media-breakpoint-up(md) {
+            float: right;
+            margin-left: 0;
+          }
+        }
+      }
+      dd {
+        @include media-breakpoint-up(md) {
+          width: calc(100% - 260px);
+        }
+        input[type="text"],
+        input[type="email"] {
+          width: 100%;
+          max-width: 400px;
+          padding: 5px;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+        }
+        textarea {
+          width: 100%;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+        }
+        .wpcf7-list-item {
+          &.first {
+            margin-right: 30px;
+          }
+          label {
+            margin: 5px 0;
+            padding-left: 25px;
+            cursor: pointer;
+            input {
+              display: none;
+              &:checked + .wpcf7-list-item-label:after {
+                content: "";
+                position: absolute;
+                left: -20px;
+                top: 5px;
+                display: inline-block;
+                vertical-align: middle;
+                width: 10px;
+                height: 10px;
+                background: #333;
+                border-radius: 50%;
+              }
+            }
+            .wpcf7-list-item-label {
+              position: relative;
+              &:before {
+                content: "";
+                position: absolute;
+                left: -25px;
+                top: 0;
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                margin-right: 5px;
+                border: 1px solid #ddd;
+                border-radius: 50%;
+              }
+            }
+          }
+        }
+      }
+    }
+    p {
+      margin: 20px 0;
+      text-align: center;
+      a {
+        color: #00f;
+        font-size: 14px;
+        text-decoration: underline;
+      }
+      label {
+        margin: 5px 0;
+        cursor: pointer;
+        input[type="checkbox"] {
+          display: none;
+          &:checked + .wpcf7-list-item-label:after {
+            content: "";
+            position: absolute;
+            left: 5px;
+            top: 7px;
+            display: inline-block;
+            vertical-align: middle;
+            width: 13px;
+            height: 7px;
+            border-bottom: 2px solid map-get($color, "sky");
+            border-left: 2px solid map-get($color, "sky");
+            transform: rotate(-35deg);
+          }
+        }
+        .wpcf7-list-item-label {
+          position: relative;
+          &:before {
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+          }
+        }
+      }
+    }
+    input[type="submit"],
+    input[type="button"] {
+      appearance: none;
+      border: none;
+      display: inline-block;
+      width: 100%;
+      max-width: 300px;
+      margin: 40px auto 0;
+      padding: 12px 0;
+      background: map-get($color, "sky");
+      border-radius: 5px;
+      color: #fff;
+      font-size: 14px;
+      font-weight: bold;
+      text-align: center;
+      &:hover {
+        background: #fff;
+        color: map-get($color, "sky");
+        border: 1px solid map-get($color, "sky");
+      }
+    }
+  }
+}

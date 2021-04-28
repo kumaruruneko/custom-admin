@@ -1,0 +1,30 @@
+article.movie{
+    .list{
+        li{
+            margin-bottom:20px;
+            width:100%;
+            @include media-breakpoint-up(md){
+                width:32%;
+                margin-bottom:30px;
+                &:not(:nth-child(3n)){
+                    margin-right:2%;
+                }
+            }
+            a{
+                display:block;
+                .img{
+                    figure{
+                        padding-top:56.25%;
+                        img{
+                            width:100%;
+                        }
+                    }
+                }
+            }
+            p a{
+                padding:15px 0;
+                font-weight:bold;
+            }
+        }
+    }
+}

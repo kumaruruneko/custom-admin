@@ -1,0 +1,16 @@
+@charset "utf-8";
+$fa-font-path: "../fonts/";
+//$drawer-hamburger-color:#fff;
+@import "~@fortawesome/fontawesome-free/scss/regular.scss";
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+@import "~@fortawesome/fontawesome-free/scss/brands.scss";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "~bootstrap/scss/bootstrap.scss";
+@import "~swiper/dist/css/swiper.css";
+// @import "~@fancyapps/fancybox/dist/jquery.fancybox.css";
+@import "~jquery-drawer/scss/drawer.scss";
+@import "~slick-carousel/slick/slick.scss";
+@import "basic";
+@import "main";
+// @import "responsive";
+@import "page/top","page/news","page/movie","page/company","page/shoplist","page/shops","page/newsdetail","page/category","page/media","page/privacy","page/terms","page/contact","page/mediadetail";
